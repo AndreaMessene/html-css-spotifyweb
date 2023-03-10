@@ -197,21 +197,24 @@ main{
     }
 
     /**** Aaggiungi playlist ****/
-    button{
-        border: none;
+    .crea{
         margin: 12px 0;
         color: rgb(42, 41, 41);
         background-color: gray;
         height: 1.7rem;
         width: 1.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .fa-plus{
-        font-size: 15px;   
-        margin-top: 1.7px;
+        font-size: 15px;
+        /* margin-top: 1.7px; */
     }
 
-    .crea{
+    .crea-playlist{
         display: flex;
         align-items: center;
         padding: 4px 0;
@@ -223,12 +226,9 @@ main{
     }
 
     /**** nuova playlist ****/
-    .playlist ul li button{
+    .playlist ul li{
         color: white;
-        width: 69.212%;
-        height: 1.3rem;
-        margin: 7px 0;
-        background-color: #0c0d11;
+        margin: 9px 0;
     }
 
     /**********  *************/
