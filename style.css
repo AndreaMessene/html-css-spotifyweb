@@ -9,10 +9,6 @@ a{
     color: white;
 }
 
-.tx-center{
-    text-align: center
-}
-
 .web-app{
     width: 100%;
     height: 100vh;
@@ -29,6 +25,7 @@ a{
     background-color: black;
     width: 40px;
     height: 100%;
+    overflow: hidden;
 }
 
 .big-logo{
@@ -55,24 +52,44 @@ a{
     display: none;
 }
 
-/* barra verticale sx bottom download e profile */
+/* barra verticale download e profile */
 
-.profile img:first-child{
-    padding: 8px 0 6px 0;
+.profile-download div span{
+    display: none;
 }
 
-.profile img:last-child{
+hr{
+    display: none;
+}
+
+.download img{
+    width: 20px;
+    margin-left: 8px;
+}
+
+.profile{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile img{
     background-color: gray;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    margin-left: 4.8px;
 }
 
 /* main con sezione "upgrade e bacheca" */
 main{
     width: calc( 100% - 40px);
     height: 100%;
-}
+    overflow: auto;
+    }
 
 /* barra upgrade */
 #bar-upgrade{
@@ -91,6 +108,81 @@ main{
     font-size: 13px;
 }
 
+/********* BACHECA *********/
+
+.suggerimenti{
+    margin-top: 90px;
+}
+
+.suggerimenti ul li{
+    font-size: 12px;
+    list-style: none;
+    margin: 0.3rem 0.7rem 1.5rem 0.7rem;
+}
+
+.suggerimenti ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.suggerimenti ul li:hover a{
+    opacity: 1;
+}
+
+.suggerimenti ul li a{
+    position: relative;
+    opacity: 0.6;
+}
+
+.suggerimenti ul li .active::after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 40%;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.suggerimenti ul li:hover a::after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 40%;
+    background-color: aqua;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* copertine 1 */
+
+.recently-played .albums{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: center;
+
+}
+
+.box-album{
+    flex-basis: calc(100% / 2 - 4% );
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
         /***** FOOTER ******/
 
 /******* divisione in 3 box del footer *******/
@@ -100,21 +192,64 @@ main{
     display: flex;
 }
 
-.strumenti-bottom{
-    width: calc(100% / 3);
-}
-
-.riproduzione-copertina{
+/* visione copertina e info generali */
+.visione-copertina{
+    width: 30%;
     height: 100%;
     background-color: darkkhaki;
+    display: flex;
+    align-items: center;
 }
 
+.box-visione-copertina{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.box-visione-copertina h3{
+    font-size: 12px;
+}
+
+.box-visione-copertina span{
+    font-size: 10px;
+    display: block;
+}
+
+.like-cartella{
+    margin-right: 8px;
+}
+
+.like-cartella i{
+    font-size: 14px;
+
+}
+
+
+/* impostazioni riproduzione */
 .play{
+    width: 40%;
     height: 100%;
-    background-color: slateblue;
+    
+}
+
+/* bottoni riproduzione */
+
+.box-buttom-play{
+
+}
+
+.box-tempo-riproduzione{
+    display: flex;
+}
+
+.barra-tempo{
+    height: 3px;
+    width: 60%;
 }
 
 .volume{
+    width: 30%;
     height: 100%;
     background-color: rgb(235, 82, 123);
 }
@@ -233,6 +368,32 @@ main{
 
     /**********  *************/
 
+    /******** barra verticale download e profile ******/
+
+    .profile-download div span{
+        display: block;
+        color: white;
+    }
+
+    .download{
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+
+    hr{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .profile{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .profile img{
+        margin-left: 10px;
+    }
 
 
 
