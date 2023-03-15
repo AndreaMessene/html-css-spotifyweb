@@ -34,6 +34,7 @@ a{
 
 .loghi{
     height: calc(100% - 80px);
+    z-index: 999S;
 }
 
 .loghi img{
@@ -160,26 +161,34 @@ main{
 
 /* copertine 1 */
 
+
+.recently-played{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.recently-played h2{
+    color: white;
+    margin: 1rem 0;
+}
+
 .recently-played .albums{
     display: flex;
     flex-wrap: wrap;
-    gap: 3%;
-    justify-content: center;
-
 }
 
 .box-album{
-    flex-basis: calc(100% / 2 - 4% );
+    flex-basis: calc(100% / 2);
     text-align: center;
+
 }
 
-
-
-
-
-
-
-
+.testo-album{
+    color: white;
+    padding-bottom: 0.7rem;
+}
 
 
 
@@ -203,12 +212,16 @@ main{
 
 .box-visione-copertina{
     display: flex;
-    align-items: center;
     margin-left: 5px;
+}
+
+.info-generali-album{
+    color: white;
 }
 
 .box-visione-copertina h3{
     font-size: 12px;
+    margin-left: 0.13rem;
 }
 
 .box-visione-copertina span{
@@ -226,26 +239,53 @@ main{
 }
 
 
-/* impostazioni riproduzione */
+/********* impostazioni riproduzione **********/
 .play{
     width: 40%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
 }
 
 /* bottoni riproduzione */
 
 .box-buttom-play{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6px;
+    align-items: center;
+}
 
+.fa-shuffle, .fa-backward-step, .fa-forward-step, .fa-arrow-rotate-right{
+    color: white;
+}
+
+.fa-circle-play{
+    color: white;
+    font-size: 28px;
 }
 
 .box-tempo-riproduzione{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-right: 4px;
+
+}
+
+.box-tempo-riproduzione span{
+    display: block;
+    color: white;
+    font-size: 12px;
 }
 
 .barra-tempo{
     height: 3px;
-    width: 60%;
+    width: 55%;
+    margin: 0 6px 0 9px;
 }
 
 .volume{
@@ -421,6 +461,14 @@ main{
 
 
 @media screen and (min-width: 426px){
+    .box-album{
+        flex-basis: calc(100% / 4 - 4% );
+    }
+
+
+
+
+
 }
 
 @media screen and (min-width: 769px){
